@@ -218,4 +218,5 @@ Para reduzir tamanho mantendo qualidade, recomenda-se (exemplos):
 - Autor(a): **[Jonatha Santos]**
 - Disciplina/Instituição: **[Desenvolvimento Front-End Para Web]**
 
-> **URL do GitHub Pages (produção):https://jonathasantos-ht.github.io/JonathaSantos4/
+> **URL do GitHub Pages (produção): https://jonathasantos-ht.github.io/JonathaSantos4/
+> **URL do GitHub Repositorio: https://github.com/JonathaSantos-ht/JonathaSantos4
