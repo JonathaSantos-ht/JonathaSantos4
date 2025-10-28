@@ -218,9 +218,7 @@ Para reduzir tamanho mantendo qualidade, recomenda-se (exemplos):
 ---
 
 ## Créditos e Licença
-- Autor(a): **[Seu Nome]**
-- Disciplina/Instituição: **[Preencher]**
-- Licença sugerida: **MIT** (ou a exigida pela disciplina).
+- Autor(a): **[Jonatha Santos]**
+- Disciplina/Instituição: **[Desenvolvimento Front-End Para Web]**
 
-> **URL do repositório público:** _preencher quando publicar_  
-> **URL do GitHub Pages (produção):** _preencher quando publicar_
+> **URL do GitHub Pages (produção):https://jonathasantos-ht.github.io/JonathaSantos4/
