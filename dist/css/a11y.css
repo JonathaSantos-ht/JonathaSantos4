@@ -1,0 +1,21 @@
+/* A11y helpers (não altera estilo original; ativa só quando necessário) */
+.skip-link{
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  left: 16px; top: 16px; width:auto; height:auto; padding:10px 14px;
+  background:#000; color:#fff; border-radius:10px; z-index:2000; outline:2px dashed #fff;
+}
+/* Alto contraste por classe (toggle JS) */
+body.contrast-high, body.contrast-high *{ text-shadow:none !important }
+body.contrast-high{ background:#000 !important; color:#fff !important }
+body.contrast-high a{ color:#fff !important; text-decoration: underline }
+body.contrast-high .btn{ background:#ff0 !important; color:#000 !important; border:2px solid #000 !important }
+body.contrast-high header, body.contrast-high main, body.contrast-high section, body.contrast-high footer{
+  background:#000 !important; border-color:#fff !important; color:#fff !important
+}
+/* Prefere mais contraste (sistema) */
+@media (prefers-contrast: more){
+  :root{ --ring: 0 0 0 3px rgba(255,255,0,.85) }
+  a, button, .btn{ text-decoration-thickness: 2px }
+}

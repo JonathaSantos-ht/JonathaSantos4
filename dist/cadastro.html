@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastre-se como voluntário da ONG Reverdecer.">
+  <title>Reverdecer | Cadastro</title>
+  <link rel="icon" href="img/logo3.png" type="image/png">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner container">
+      <a href="index.html" aria-label="Ir para início">  
+      <img src="img/logo.png" alt="Logo Reverdecer" class="logo">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <button class="hamb" aria-expanded="false" aria-controls="menu-principal" id="btnMenu">☰</button>
+        <ul id="menu-principal" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html">Início</a></li>
+          <li role="none" class="has-sub">
+            <a role="menuitem" href="projetos.html">Projetos</a>
+            <div class="submenu" role="menu" aria-label="Submenu Projetos">
+              <a role="menuitem" href="projetos.html#ambientais">Ambientais</a>
+              <a role="menuitem" href="projetos.html#sociais">Sociais</a>
+            </div>
+          </li>
+          <li role="none"><a role="menuitem" href="cadastro.html" class="ativo">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <img src="img/voluntarios1.jpg" alt="Voluntários em atividade" class="banner" loading="lazy">
+
+  <main class="container">
+    <h1>Cadastro de Voluntário</h1>
+
+    <form id="form-voluntario" novalidate>
+      <fieldset>
+        <legend>Informações Pessoais</legend>
+
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" required minlength="3" placeholder="Digite seu nome completo" autocomplete="name" aria-describedby="hNome">
+        <div id="hNome" class="help">Mínimo 3 caracteres.</div>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required placeholder="exemplo@email.com" autocomplete="email">
+
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" name="cpf" pattern="\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}" placeholder="000.000.000-00" required inputmode="numeric">
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required inputmode="tel">
+
+        <label for="data-nasc">Data de Nascimento</label>
+        <input type="date" id="data-nasc" name="data-nasc" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, bairro" autocomplete="street-address">
+
+        <label for="cep">CEP</label>
+        <input type="text" id="cep" name="cep" pattern="\\d{5}-\\d{3}" placeholder="00000-000" required inputmode="numeric">
+
+        <label for="cidade">Cidade</label>
+        <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade" autocomplete="address-level2">
+
+        <label for="estado">Estado (UF)</label>
+        <input type="text" id="estado" name="estado" maxlength="2" placeholder="UF" required autocomplete="address-level1">
+      </fieldset>
+
+      <button type="submit" class="btn">Enviar Cadastro</button>
+      <button type="button" class="btn" style="background:#0e8f7e;color:#eaffea" onclick="toggleModal(true)">Ver política</button>
+
+      <div class="alert warn" id="alertForm" style="display:none;margin-top:16px" role="alert" aria-live="assertive">
+  Preencha os campos obrigatórios destacados em vermelho.
+</div>
+    </form>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+  Cadastro enviado com sucesso. Obrigado por somar com a gente!
+</div>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalEx" aria-hidden="true" aria-labelledby="ttlPolitica" role="dialog">
+    <div class="modal" role="document">
+      <header class="header-inner">
+        <h3 id="ttlPolitica" style="margin:0">Política de Privacidade</h3>
+        <button class="hamb" aria-label="Fechar" onclick="toggleModal(false)">✕</button>
+      </header>
+      <div class="modal-body">
+        <p>Usaremos seus dados apenas para contato sobre ações da ONG. Você pode solicitar exclusão a qualquer momento.</p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" onclick="toggleModal(false)">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="doacao" id="doacao" aria-labelledby="ttlDoacao">
+    <div class="container">
+      <h2 id="ttlDoacao">Doe para a Reverdecer</h2>
+      <p>Seu apoio mantém nossos projetos vivos. Escolha uma opção abaixo e ajude como puder.</p>
+      <div class="opcoes">
+        <div class="box">
+          <h3>PIX</h3>
+          <p>Use a chave abaixo no seu banco para fazer uma doação.</p>
+          <div class="chave" id="pixBox">
+            <span id="pixKey">doacoes@Reverdecer.org</span>
+            <button class="copy-btn" type="button" onclick="copyText('#pixKey')">Copiar</button>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Transferência</h3>
+          <p>Titular: ONG Reverdecer</p>
+          <ul>
+            <li><strong>Banco:</strong> BANCO ITAÚ</li>
+            <li><strong>Agência:</strong> 4584</li>
+            <li><strong>Conta:</strong> 55484-5</li>
+            <li><strong>CNPJ:</strong> 25.567.786/0001-45</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Recorrente</h3>
+          <p>Quer doar todos os meses? Crie um agendamento no seu banco usando a chave PIX.</p>
+          <a class="btn" href="#doacao">Quero contribuir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato" aria-labelledby="ttlContato">
+    <div class="container">
+      <h2 id="ttlContato">Entre em Contato</h2>
+      <p>Tem dúvidas ou quer saber mais sobre nossos projetos? Fale com a gente.</p>
+      <ul>
+        <li><strong>📞 Telefone:</strong> (11) 4002-8922</li>
+        <li><strong>📧 E-mail:</strong> contato@reverdecer.org</li>
+        <li><strong>💬 WhatsApp:</strong> <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">(+55) 00 00000-0000</a></li>
+        <li><strong>📍 Endereço:</strong> Rua das Palmeiras, 150 – São Paulo/SP</li>
+        <li><strong>🕓 Horário:</strong> Segunda a Sexta, 9h às 18h</li>
+      </ul>
+    </div>
+  </section>
+
+
+<footer>
+    <p>&copy; 2025 ONG Reverdecer | Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Navegação mobile
+    const nav = document.querySelector('.nav');
+    const btn = document.getElementById('btnMenu');
+    btn?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Modal
+    function toggleModal(open=true){
+      const el = document.getElementById('modalEx');
+      if(!el) return;
+      el.classList.toggle('open', open);
+      el.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
+
+    // Validação visual simples
+    const form = document.getElementById('form-voluntario');
+    form?.addEventListener('submit', (e)=>{
+      if(!form.checkValidity()){
+        e.preventDefault();
+        document.getElementById('alertForm').style.display = 'block';
+        [...form.elements].forEach(el=>{
+          if(el.willValidate && !el.checkValidity()){
+            el.classList.add('is-invalid');
+          }else{
+            el.classList.remove('is-invalid');
+          }
+        })
+        return;
+      }
+      e.preventDefault();
+      // sucesso fake
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(()=> t.classList.remove('show'), 3200);
+      form.reset();
+    });
+  </script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>

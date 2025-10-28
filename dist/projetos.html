@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projetos sociais e ambientais da ONG Reverdecer.">
+  <title>Reverdecer | Projetos</title>
+  <link rel="icon" href="img/logo3.png" type="image/png">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner container">
+      <a href="index.html" aria-label="Ir para início">
+        <img src="img/logo.png" alt="Logo Reverdecer" class="logo">
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="hamb" aria-expanded="false" aria-controls="menu-principal" id="btnMenu">☰</button>
+        <ul id="menu-principal" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html">Início</a></li>
+          <li role="none" class="has-sub">
+            <a role="menuitem" href="projetos.html" class="ativo">Projetos</a>
+            <div class="submenu" role="menu" aria-label="Submenu Projetos">
+              <a role="menuitem" href="#ambientais">Ambientais</a>
+              <a role="menuitem" href="#sociais">Sociais</a>
+              <a role="menuitem" href="#comunidade">Comunidade</a>
+            </div>
+          </li>
+          <li role="none"><a role="menuitem" href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Projetos</h1>
+
+    <!-- Cards responsivos com badges e tags -->
+    <section id="ambientais" aria-labelledby="ttlAmb">
+      <h2 id="ttlAmb">Ambientais</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="img/projeto1.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Projeto Reflorestar</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: 10.000 mudas</span>
+            </div>
+            <p>Plantio e manutenção de árvores nativas para recuperação de áreas degradadas.</p>
+            <div class="tags">
+              <span class="tag">#mataatlantica</span>
+              <span class="tag">#biodiversidade</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/ambiental1.jpg" alt="Palestra de educação ambiental em escola">
+          <div class="card-body">
+            <h3 class="card-title">Educação Verde</h3>
+            <div class="card-meta">
+              <span class="badge info">Workshops</span>
+              <span class="badge warn">Vagas limitadas</span>
+            </div>
+            <p>Palestras, oficinas e vivências para formar consciência ambiental prática.</p>
+            <div class="tags">
+              <span class="tag">#escolas</span>
+              <span class="tag">#reciclagem</span>
+            </div>
+            <div class="mt-2"><button class="btn" onclick="notify()">Inscrever turma</button></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/comunitaria.jpg" alt="Mutirão de limpeza urbana">
+          <div class="card-body">
+            <h3 class="card-title">Ações Comunitárias</h3>
+            <div class="card-meta">
+              <span class="badge success">Próximo sábado</span>
+              <span class="badge info">Praças e rios</span>
+            </div>
+            <p>Mutirões de limpeza, coleta seletiva e hortas urbanas com voluntários locais.</p>
+            <div class="tags">
+              <span class="tag">#coletaseletiva</span>
+              <span class="tag">#hortaurbana</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Participar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto2.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Biodiversidade</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Plantar 1.500 mudas nativas</span>
+            </div>
+            <p>Biodiversidade é vida conectada: quando o ambiente floresce, a gente também.</p>
+            <div class="tags">
+              <span class="tag">#BiodiversidadeUrbana</span>
+              <span class="tag">#Polinizadores</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="img/projeto18.jpg" alt="Recuperação do Solo">
+          <div class="card-body">
+            <h3 class="card-title">Recuperação de Solos</h3>
+            <div class="card-meta">
+              <span class="badge info">Ativo</span>
+              <span class="badge warn">Elevar matéria orgânica do solo em +1 p.p.</span>
+            </div>
+            <p>Solo vivo segura água e dá vida.</p>
+            <div class="tags">
+              <span class="tag">#SoloSaudável</span>
+              <span class="tag">#AdubaçãoVerde</span>
+            </div>
+            <div class="mt-2"><button class="btn" onclick="notify()">Inscrever</button></div>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="img/projeto17.jpg" alt="Podas Seguras">
+          <div class="card-body">
+            <h3 class="card-title">Podas Seguras</h3>
+            <div class="card-meta">
+              <span class="badge info">Ativo</span>
+              <span class="badge warn">Executar 800 podas técnicas.</span>
+            </div>
+            <p>Cuidar da árvore é cuidar da cidade.</p>
+            <div class="tags">
+              <span class="tag">#PodaResponsável</span>
+              <span class="tag">#Segurança</span>
+            </div>
+            <div class="mt-2"><button class="btn" onclick="notify()">Inscrever</button></div>
+          </div>
+        </article>
+      </div>
+    </section>  
+
+    <section id="Social" aria-labelledby="ttlAmb">
+      <h2 id="ttlAmb">Social</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="img/projeto3.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Gestão de Resíduos</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Desviar 30 t/ano de recicláveis do aterro</span>
+            </div>
+            <p>Resíduo é recurso parado; vamos pôr pra girar.</p>
+            <div class="tags">
+              <span class="tag">#LixoZero</span>
+              <span class="tag">#ReciclagemJá</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto4.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Qualidade do Ar</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Arborizar 20 pontos quentes</span>
+            </div>
+            <p>Sombra e verde derrubam o calor onde mais aperta.</p>
+            <div class="tags">
+              <span class="tag">#QualidadeDoAr</span>
+              <span class="tag">#SombraÉVida</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto5.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Agricultura Urbana</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Implantar 3 agroflorestas urbanas.</span>
+            </div>
+            <p>Solo vivo, cidade que alimenta.</p>
+            <div class="tags">
+              <span class="tag">#Agrofloresta</span>
+              <span class="tag">#SoloSaudável</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto6.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Monitoramento Comunitário</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Treinar 120 voluntários em protocolos simples.</span>
+            </div>
+            <p>Medir, mostrar e melhorar.</p>
+            <div class="tags">
+              <span class="tag">#CiênciaCidadã</span>
+              <span class="tag">#MonitoramentoAmbiental</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero participar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto19.jpg" alt="hortas Comunitárias">
+            <div class="card-body">
+            <h3 class="card-title">Hortas Comunitárias</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Implantar 12 hortas em escolas/CRAS.</span>
+            </div>
+            <p>Comida de perto, saúde por inteiro.</p>
+            <div class="tags">
+              <span class="tag">#HortaComunitária</span>
+              <span class="tag">#AlimentoLocal</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero participar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto20.jpg" alt="Saúde Ambientala">
+          <div class="card-body">
+            <h3 class="card-title">Saúde Ambiental</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Realizar 18 ações de prevenção.</span>
+            </div>
+            <p>Ambiente saudável, gente melhor.</p>
+            <div class="tags">
+              <span class="tag">#SaúdeAmbiental</span>
+              <span class="tag">#Prevenção</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero participar</a></div>
+          </div>
+        </article>
+       </div>
+      </section>  
+  
+    <section id="Comunidade" aria-labelledby="ttlAmb">
+      <h2 id="ttlAmb">Comunidade</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="img/projeto7.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Mutirão de Limpeza</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Desviar 10 t/ano de recicláveis via hubs.</span>
+            </div>
+            <p>Rua limpa, comunidade que cuida.</p>
+            <div class="tags">
+              <span class="tag">#MutirãoVerde</span>
+              <span class="tag">#ReciclagemComunitária</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto8.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Praças Pocket Parks</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Plantar 500 árvores/arbustos</span>
+            </div>
+            <p>Um canto verde a cada quarteirão.</p>
+            <div class="tags">
+              <span class="tag">#Arborização</span>
+              <span class="tag">#PocketPark</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto9.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Cultura Ambiental</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Produzir 12 materiais educativos</span>
+            </div>
+            <p>“Aprender fazendo: gerações juntas no verde.</p>
+            <div class="tags">
+              <span class="tag">#EducaçãoAmbiental</span>
+              <span class="tag">#CulturaComunitária</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+
+        <article class="card">
+          <img src="img/projeto10.jpg" alt="Plantio de mudas em área degradada">
+          <div class="card-body">
+            <h3 class="card-title">Redução do Plástico de Uso Único</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Eliminar 80% do plástico descartável.</span>
+            </div>
+            <p>Plástico não some sozinho, a gente para de usar.</p>
+            <div class="tags">
+              <span class="tag">#ConsumoConsciente</span>
+              <span class="tag">#PlásticoZero</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto21.jpg" alt="Banco de Sementes">
+           <div class="card-body">
+            <h3 class="card-title">Banco de Sementes</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Distribuir 5 mil sementes/ano.</span>
+            </div>
+            <p>Guardar hoje para plantar amanhã.</p>
+            <div class="tags">
+              <span class="tag">#Nativas</span>
+              <span class="tag">#Reflorestamento</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/projeto22.jpg" alt="Cooperativa de Reciclagem">
+          <div class="card-body">
+            <h3 class="card-title">Cooperativa de Reciclagem</h3>
+            <div class="card-meta">
+              <span class="badge success">Ativo</span>
+              <span class="badge info">Meta: Formalizar 1 cooperativa com 40 catadores.</span>
+            </div>
+            <p>Trabalho digno, cidade mais limpa.</p>
+            <div class="tags">
+              <span class="tag">#Cooperativismo</span>
+              <span class="tag">#EconomiaCircular</span>
+            </div>
+            <div class="mt-2"><a class="btn" href="cadastro.html">Quero ajudar</a></div>
+          </div>
+        </article>
+    
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+  Inscrição registrada. Enviaremos instruções por e-mail.
+</div>
+  </main>
+
+  
+  <section class="doacao" id="doacao" aria-labelledby="ttlDoacao">
+    <div class="container">
+      <h2 id="ttlDoacao">Doe para a Reverdecer</h2>
+      <p>Seu apoio mantém nossos projetos vivos. Escolha uma opção abaixo e ajude como puder.</p>
+      <div class="opcoes">
+        <div class="box">
+          <h3>PIX</h3>
+          <p>Use a chave abaixo no seu banco para fazer uma doação.</p>
+          <div class="chave" id="pixBox">
+            <span id="pixKey">doacoes@Reverdecer.org</span>
+            <button class="copy-btn" type="button" onclick="copyText('#pixKey')">Copiar</button>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Transferência</h3>
+          <p>Titular: ONG Reverdecer</p>
+          <ul>
+            <li><strong>Banco:</strong> BANCO ITAÚ</li>
+            <li><strong>Agência:</strong> 4584</li>
+            <li><strong>Conta:</strong> 55484-5</li>
+            <li><strong>CNPJ:</strong> 25.567.786/0001-45</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Recorrente</h3>
+          <p>Quer doar todos os meses? Crie um agendamento no seu banco usando a chave PIX.</p>
+          <a class="btn" href="#doacao">Quero contribuir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato" aria-labelledby="ttlContato">
+    <div class="container">
+      <h2 id="ttlContato">Entre em Contato</h2>
+      <p>Tem dúvidas ou quer saber mais sobre nossos projetos? Fale com a gente.</p>
+      <ul>
+        <li><strong>📞 Telefone:</strong> (11) 4002-8922</li>
+        <li><strong>📧 E-mail:</strong> contato@reverdecer.org</li>
+        <li><strong>💬 WhatsApp:</strong> <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">(+55) 00 00000-0000</a></li>
+        <li><strong>📍 Endereço:</strong> Rua das Palmeiras, 150 – São Paulo/SP</li>
+        <li><strong>🕓 Horário:</strong> Segunda a Sexta, 9h às 18h</li>
+      </ul>
+    </div>
+  </section>
+
+
+<footer>
+    <p>&copy; 2025 ONG Reverdecer | Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Hamburguer
+    const nav = document.querySelector('.nav');
+    const btn = document.getElementById('btnMenu');
+    btn?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Toast simples
+    function notify(){
+      const t = document.getElementById('toast');
+      if(!t) return;
+      t.classList.add('show');
+      setTimeout(()=> t.classList.remove('show'), 3200);
+    }
+  </script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>
