@@ -1,7 +1,4 @@
-# ONG Reverdecer — Documentação Técnica (Atividade 4)
-
-> **Entrega final** do projeto web com práticas profissionais de **versionamento**, **acessibilidade** e **deploy** em produção.  
-> Esta documentação acompanha o código e atende aos requisitos da disciplina.
+# ONG Reverdecer 
 
 ---
 
